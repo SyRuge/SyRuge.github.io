@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="RxJava2," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="RxJava2学习笔记，基于io.reactivex.rxjava2:rxjava:2.1.10">
+<meta name="keywords" content="RxJava2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/08/31/hello-world/index.html">
+<meta property="og:title" content="RxJava2源码分析">
+<meta property="og:url" content="http://yoursite.com/2018/09/13/RxJava2源码分析/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="RxJava2学习笔记，基于io.reactivex.rxjava2:rxjava:2.1.10">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-31T06:34:01.454Z">
+<meta property="og:updated_time" content="2018-09-13T08:23:38.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="RxJava2源码分析">
+<meta name="twitter:description" content="RxJava2学习笔记，基于io.reactivex.rxjava2:rxjava:2.1.10">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/31/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/13/RxJava2源码分析/"/>
 
 
 
 
 
-  <title>Hello World | Hexo</title>
+  <title>RxJava2源码分析 | Hexo</title>
   
 
 
@@ -232,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/RxJava2源码分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ruge">
@@ -249,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">RxJava2源码分析</h1>
         
 
         <div class="post-meta">
@@ -261,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-31T14:34:01+08:00">
-                2018-08-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-13T15:00:19+08:00">
+                2018-09-13
               </time>
             
 
@@ -271,6 +272,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/RxJava2/" itemprop="url" rel="index">
+                    <span itemprop="name">RxJava2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -299,15 +322,131 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>RxJava2学习笔记，基于<code>io.reactivex.rxjava2:rxjava:2.1.10</code><br><a id="more"></a></p>
+<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><p>RxJava简单的使用如下：</p>
+<pre><code>Observable.create(new ObservableOnSubscribe&lt;String&gt;() {
+            @Override
+            public void subscribe(ObservableEmitter&lt;String&gt; emitter) throws Exception {
+                emitter.onNext(&quot;aaa&quot;);
+                emitter.onNext(&quot;zzz&quot;);
+                emitter.onComplete();
+            }
+        }).subscribe(new Observer&lt;String&gt;() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(String s) {
+                Log.d(&quot;xcx&quot;, &quot;onNext: &quot;+s);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+                Log.d(&quot;xcx&quot;, &quot;onComplete: &quot;);
+            }
+        });
+</code></pre><h3 id="Observable-create"><a href="#Observable-create" class="headerlink" title="Observable.create"></a>Observable.create</h3><p>我们看一下create()方法做了什么：</p>
+<pre><code>public static &lt;T&gt; Observable&lt;T&gt; create(ObservableOnSubscribe&lt;T&gt; source) {
+         //判断空值
+        ObjectHelper.requireNonNull(source, &quot;source is null&quot;);
+        return RxJavaPlugins.onAssembly(new ObservableCreate&lt;T&gt;(source));
+    }
+</code></pre><p>调用onAssembly()方法，传入一个ObservableCreate类，并且将我们在create传入的ObservableOnSubscribe作为构造参数传入。</p>
+<h4 id="看一下onAssembly："><a href="#看一下onAssembly：" class="headerlink" title="看一下onAssembly："></a>看一下onAssembly：</h4><pre><code>public static &lt;T&gt; Observable&lt;T&gt; onAssembly(@NonNull Observable&lt;T&gt; source) {
+        Function&lt;? super Observable, ? extends Observable&gt; f = onObservableAssembly;
+        if (f != null) {
+            return apply(f, source);
+        }
+        return source;
+    }
+</code></pre><p>如果onObservableAssembly为空，则返回source。onObservableAssembly在哪里赋值的呢？在这里：</p>
+<pre><code>setOnObservableAssembly(null);
+public static void setOnObservableAssembly(@Nullable Function&lt;? super Observable, ? extends Observable&gt; onObservableAssembly) {
+    if (lockdown) {
+        throw new IllegalStateException(&quot;Plugins can&apos;t be changed anymore&quot;);
+    }
+    RxJavaPlugins.onObservableAssembly = onObservableAssembly;
+}
+</code></pre><p>可以看出，这一步只是将Observable做了封装，传入什么就返回了什么。RxJava中还有很多这样的方法，碰到我们再说。此时转入ObservableCreate类中。</p>
+<h4 id="ObservableCreate类"><a href="#ObservableCreate类" class="headerlink" title="ObservableCreate类"></a>ObservableCreate类</h4><p>这一步只是将我们传入的source保存了起来，此时完成了observable的创建任务，是何时订阅的呢？没错，就是在subscribe()方法中订阅的。接下来看subscribe(Observer)方法</p>
+<pre><code>public final class ObservableCreate&lt;T&gt; extends Observable&lt;T&gt; {
+    final ObservableOnSubscribe&lt;T&gt; source;
+
+    public ObservableCreate(ObservableOnSubscribe&lt;T&gt; source) {
+        this.source = source;
+    }
+
+    @Override
+    protected void subscribeActual(Observer&lt;? super T&gt; observer) {
+        CreateEmitter&lt;T&gt; parent = new CreateEmitter&lt;T&gt;(observer);
+        observer.onSubscribe(parent);
+
+        try {
+            source.subscribe(parent);
+        } catch (Throwable ex) {
+            Exceptions.throwIfFatal(ex);
+            parent.onError(ex);
+        }
+    }
+
+    static final class CreateEmitter&lt;T&gt;
+    extends AtomicReference&lt;Disposable&gt;
+    implements ObservableEmitter&lt;T&gt;, Disposable { ... }
+}
+</code></pre><h3 id="Observable-subscribe-Observer"><a href="#Observable-subscribe-Observer" class="headerlink" title="Observable#subscribe(Observer)"></a>Observable#subscribe(Observer<t>)</t></h3><pre><code>public final void subscribe(Observer&lt;? super T&gt; observer) {
+        ObjectHelper.requireNonNull(observer, &quot;observer is null&quot;);
+        try {
+              //调用onSubscribe，跟onAssembly一样，返回了传入的observer
+            observer = RxJavaPlugins.onSubscribe(this, observer);
+
+            ObjectHelper.requireNonNull(observer, &quot;Plugin returned null Observer&quot;);
+            //核心代码，传入observer
+            subscribeActual(observer);
+        } catch (NullPointerException e) { // NOPMD
+            throw e;
+        } catch (Throwable e) {
+            Exceptions.throwIfFatal(e);
+            // can&apos;t call onError because no way to know if a Disposable has been set or not
+            // can&apos;t call onSubscribe because the call might have set a Subscription already
+            RxJavaPlugins.onError(e);
+
+            NullPointerException npe = new NullPointerException(&quot;Actually not, but can&apos;t throw other exceptions due to RS&quot;);
+            npe.initCause(e);
+            throw npe;
+        }
+    }
+</code></pre><p>细心的你看到了么？调用了<code>subscribeActual(observer);</code>这个方法，上面ObservableCreate类也有相同的方法。是巧合么？肯定不是啦。这个方法在Observable中：</p>
+<pre><code>protected abstract void subscribeActual(Observer&lt;? super T&gt; observer);
+</code></pre><p>上面提到过ObservableCreate类，它继承了了Observable，实现了<code>subscribeActual(observer);</code>这个方法。当我们调用subscribe时，其实就是调用了ObservableCreate实现方法。</p>
+<pre><code>ObservableCreate类的subscribeActual
+
+@Override
+protected void subscribeActual(Observer&lt;? super T&gt; observer) {
+    CreateEmitter&lt;T&gt; parent = new CreateEmitter&lt;T&gt;(observer);
+    observer.onSubscribe(parent);
+
+    try {
+        source.subscribe(parent);
+    } catch (Throwable ex) {
+        Exceptions.throwIfFatal(ex);
+        parent.onError(ex);
+    }
+}
+</code></pre><p>调用source就是我们传入的ObservableOnSubscribe的onSubscribe开始传输数据。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>整个过程其实分三步：</p>
+<ol>
+<li>创建ObservableCreate类该类继承了Observable，实现了<code>subscribeActual()</code>方法。</li>
+<li>调用ObservableCreate的<code>subscribe()</code>方法，内部调用了第一步的<code>subscribeActual()</code></li>
+<li><code>subscribeActual()</code>内部调用了ObservableOnSubscribe的subscribe()方法，开始传输数据。</li>
+</ol>
+<p>把observer的引用传给了Observable，从而可以调用observer的方法。</p>
 
       
     </div>
@@ -323,6 +462,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/RxJava2/" rel="tag"># RxJava2</a>
+          
+        </div>
+      
 
       
       
@@ -332,15 +477,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/09/13/加油/" rel="next" title="接下来该做的事儿">
+                <i class="fa fa-chevron-left"></i> 接下来该做的事儿
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/31/ruge/" rel="prev" title="如歌呀">
-                如歌呀 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -472,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Observable-create"><span class="nav-number">2.</span> <span class="nav-text">Observable.create</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#看一下onAssembly："><span class="nav-number">2.1.</span> <span class="nav-text">看一下onAssembly：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ObservableCreate类"><span class="nav-number">2.2.</span> <span class="nav-text">ObservableCreate类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Observable-subscribe-Observer"><span class="nav-number">3.</span> <span class="nav-text">Observable#subscribe(Observer)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
