@@ -5,7 +5,23 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ## Quick Start
 
-### Create a new post
+## 发表博文
+
+hexo clean
+hexo generate
+hexo deploy
+
+hexo g == hexo generate
+hexo d == hexo deploy
+hexo s == hexo server
+hexo n == hexo new
+### 还能组合使用
+
+hexo d -g
+
+<!--more-->
+
+Create a new post
 
 ``` bash
 $ hexo new "My New Post"
