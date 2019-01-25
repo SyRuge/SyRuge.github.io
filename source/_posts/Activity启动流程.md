@@ -1,3 +1,10 @@
+---
+title: Activity启动流程
+date: 2019-01-24 17:49:12
+tags: Android开发艺术探索笔记
+categories: [Android开发艺术探索笔记]
+---
+
 ## Activity启动流程(MainActivity->SecondActivity)
 
 在描述之前，需要了解相关概念。
@@ -9,6 +16,8 @@
 ### ActivityThread
 
 Activity内部有一个成员变量mMainThread，其类型为ActivityThread，用来描述一个应用程序**进程**。系统每启动一个应用程序进程时，就会在它里面创建一个**ActivityThread**实例，并且会将这个实例保存在该进程每一个被启动Activity的启动Activity的**mMainThread**中(A启动B，保存在A中)。
+
+<!--more-->
 
 ### ActivityRecord
 

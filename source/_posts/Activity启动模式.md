@@ -1,8 +1,8 @@
 ---
 title: Activity启动模式
 date: 2019-01-09 19:00:19
-tags: Android
-categories: [Android]
+tags: Android开发艺术探索笔记
+categories: [Android开发艺术探索笔记]
 
 ---
 
